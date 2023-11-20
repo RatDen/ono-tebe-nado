@@ -1,11 +1,27 @@
+.section_pos {
+  margin: 0 50px 180px 50px;
+}
+.ls_0 {
+  letter-spacing: 0;
+}
+.ls_60 {
+  letter-spacing: 60px;
+}
+.justify-self_center {
+  justify-self: center;
+}
+.justify-self_end {
+  justify-self: end;
+}
+
 .info-text {
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  text-decoration: none;
 }
+
 .section-title {
   color: #000;
   font-family: Raleway, sans-serif;
@@ -15,49 +31,27 @@
   line-height: normal;
   text-transform: uppercase;
 }
-.info-reference {
-  border-bottom: solid 1px #000;
+
+.text-link {
+  text-underline-offset: 4px;
 }
 
-/* header */
-.site-info {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 90px 50px;
+.text-link_active {
+  text-decoration: none;
+  cursor: default;
 }
+
 .menu {
   display: flex;
   align-items: center;
-}
-.menu-list {
-  display: flex;
-  list-style: circle;
-}
-.menu-list-item {
-  margin-left: 32px;
-}
-.menu-list-item:first-child {
-  margin-left: 0;
-  list-style-type: none;
-}
-.menu-list-item:first-child a {
-  border-bottom: none;
-  cursor: default;
 }
 
 .logo-wrap {
   width: 150px;
   height: 105px;
-  position: absolute;
-  left: 50%;
   transform: translateX(-50%);
 }
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   height: 100%;
 }
 
@@ -68,28 +62,56 @@
   width: 240px;
   line-height: 1.2;
 }
-.contacts-item {
-  display: block;
-}
-.contacts-item:last-child {
+.address {
   line-height: 24.3px;
+}
+
+.main {
+  gap: 180px;
+}
+
+/* header */
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 90px 50px;
+}
+.menu-list-header {
+  display: flex;
+  gap: 32px;
+  list-style: circle;
+}
+.menu-list-header li:first-child {
+  list-style-type: none;
 }
 /* header end */
 
-/* main */
-.main {
+/* jambotron */
+.jambotron {
+  margin-bottom: 180px;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
-      /*без градиента не делается затемнение*/,
-    center / cover no-repeat url(../images/cover.jpg);
+  display: flex;
+  flex-direction: column;
+  background: center / cover no-repeat url(../images/cover.jpg);
+  align-items: end;
 }
-.main-title {
+.jambotron:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.jambotron-title {
   display: grid;
+  z-index: 1;
   gap: 14px 0;
-  padding: 165px 50px 240px 50px;
+  width: 100%;
+  padding: 165px 50px 190px 50px;
 }
-.main-title-text {
-  display: block;
+.jambotron-title-line {
   color: #fff;
   font-family: Raleway, sans-serif;
   font-size: 100px;
@@ -99,15 +121,15 @@
   letter-spacing: 30px;
   text-transform: uppercase;
 }
-.main-title-text:last-child {
+.jambotron-title-line:last-child {
   line-height: 0.95;
 }
-.main-action {
-  position: absolute;
+.jambotron-action {
+  position: relative;
   right: 50px;
   bottom: 50px;
 }
-.main-action-text {
+.jambotron-action-text {
   color: #fff;
   text-align: center;
   font-family: Raleway, sans-serif;
@@ -117,18 +139,18 @@
   line-height: 28px; /* 127.273% */
   text-transform: uppercase;
 }
-.main-slogan {
+.jambotron-slogan {
   display: inline;
   margin-right: 80px;
   word-spacing: 17px;
 }
-.main-button {
+.jambotron-button {
   border: 1px solid #fff;
   background-color: transparent;
   padding: 13px 32px;
   line-height: normal;
 }
-/* main end */
+/* jambotron end */
 
 /* lots */
 .lots {
@@ -144,10 +166,18 @@
   gap: 0 20px;
   list-style: none;
 }
-.lots-link {
-  text-decoration: none;
-}
 .lots-item {
+  position: relative;
+}
+.lots-item:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.lots-link {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,6 +186,8 @@
   color: #fff;
   font-family: Raleway, sans-serif;
   font-style: normal;
+  text-decoration: none;
+  z-index: 1;
 }
 .lots-item-title {
   font-size: 22px;
@@ -184,18 +216,15 @@
     ". text" 1fr / 430px 1fr;
   gap: 0 20px;
 }
-.about-wrap-image {
+.about-logo-wrap {
   height: 240px;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
+  background: center no-repeat url(../images/ellipse.svg);
 }
-.ellipse {
-  height: 100%;
-  position: absolute;
-}
-.about-wrap-logo {
+.logo-about {
   height: 115px;
 }
 .about-title {
@@ -220,15 +249,16 @@
 /* footer */
 .footer {
   align-items: flex-start;
-  margin-top: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 90px 50px;
 }
 .menu-list-footer {
+  display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
-}
-.menu-list-item-footer {
-  margin: 0;
 }
 .socials {
   display: flex;
