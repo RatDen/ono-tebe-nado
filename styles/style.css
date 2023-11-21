@@ -4,7 +4,7 @@
 .ls_0 {
   letter-spacing: 0;
 }
-.ls_60 {
+.ls_big {
   letter-spacing: 60px;
 }
 .justify-self_center {
@@ -32,11 +32,7 @@
   text-transform: uppercase;
 }
 
-.text-link {
-  text-underline-offset: 4px;
-}
-
-.text-link_active {
+.link_active {
   text-decoration: none;
   cursor: default;
 }
@@ -109,7 +105,7 @@
   z-index: 1;
   gap: 14px 0;
   width: 100%;
-  padding: 165px 50px 190px 50px;
+  padding: 165px 50px 140px 50px;
 }
 .jambotron-title-line {
   color: #fff;
@@ -125,9 +121,11 @@
   line-height: 0.95;
 }
 .jambotron-action {
-  position: relative;
-  right: 50px;
-  bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  z-index: 1;
+  margin: 0 50px 50px 0;
 }
 .jambotron-action-text {
   color: #fff;
@@ -138,13 +136,17 @@
   font-weight: 400;
   line-height: 28px; /* 127.273% */
   text-transform: uppercase;
-}
-.jambotron-slogan {
-  display: inline;
-  margin-right: 80px;
   word-spacing: 17px;
 }
-.jambotron-button {
+.jambotron-action-button {
+  color: #fff;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 127.273% */
+  text-transform: uppercase;
   border: 1px solid #fff;
   background-color: transparent;
   padding: 13px 32px;
@@ -153,9 +155,6 @@
 /* jambotron end */
 
 /* lots */
-.lots {
-  margin-bottom: 185px;
-}
 .lots-title {
   margin-left: 40px;
 }
@@ -168,6 +167,15 @@
 }
 .lots-item {
   position: relative;
+}
+.lot_1 {
+  background: center / cover url(../images/card-lot-01.jpg);
+}
+.lot_2 {
+  background: center / cover url(../images/card-lot-02.jpg);
+}
+.lot_3 {
+  background: center / cover url(../images/card-lot-03.jpg);
 }
 .lots-item:before {
   content: "";
@@ -238,7 +246,7 @@
 .about-text {
   margin: 5px;
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -265,7 +273,6 @@
   justify-content: space-between;
   width: 240px;
 }
-.socials-link,
 .socials-link-logo {
   height: 50px;
 }

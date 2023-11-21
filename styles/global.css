@@ -27,6 +27,7 @@ blockquote {
 }
 
 a {
+  text-underline-offset: 4px;
   color: inherit;
 }
 
