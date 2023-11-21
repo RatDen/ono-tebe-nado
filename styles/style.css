@@ -17,17 +17,17 @@
 .info-text {
   color: #000;
   font-family: Raleway, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
 }
 
 .section-title {
   color: #000;
   font-family: Raleway, sans-serif;
+  font-weight: 700;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -53,8 +53,8 @@
 
 .contacts {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   width: 240px;
   line-height: 1.2;
 }
@@ -86,23 +86,23 @@
 
 /* jambotron */
 .jambotron {
-  margin-bottom: 180px;
   position: relative;
   display: flex;
   flex-direction: column;
-  background: center / cover no-repeat url(../images/cover.jpg);
   align-items: end;
+  margin-bottom: 180px;
+  background: center / cover no-repeat url(../images/cover.jpg);
 }
 .jambotron:before {
   content: "";
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .jambotron-title {
-  display: grid;
   z-index: 1;
+  display: grid;
   gap: 14px 0;
   width: 100%;
   padding: 165px 50px 140px 50px;
@@ -110,9 +110,9 @@
 .jambotron-title-line {
   color: #fff;
   font-family: Raleway, sans-serif;
+  font-weight: 700;
   font-size: 100px;
   font-style: normal;
-  font-weight: 700;
   line-height: 115px;
   letter-spacing: 30px;
   text-transform: uppercase;
@@ -121,36 +121,35 @@
   line-height: 0.95;
 }
 .jambotron-action {
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 80px;
-  z-index: 1;
   margin: 0 50px 50px 0;
 }
 .jambotron-action-text {
   color: #fff;
-  text-align: center;
   font-family: Raleway, sans-serif;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: 28px; /* 127.273% */
+  text-align: center;
   text-transform: uppercase;
   word-spacing: 17px;
 }
 .jambotron-action-button {
+  border: 1px solid #fff;
+  padding: 13px 32px;
   color: #fff;
-  text-align: center;
   font-family: Raleway, sans-serif;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 127.273% */
-  text-transform: uppercase;
-  border: 1px solid #fff;
-  background-color: transparent;
-  padding: 13px 32px;
   line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 /* jambotron end */
 
@@ -159,10 +158,10 @@
   margin-left: 40px;
 }
 .lots-cases {
-  margin: 26px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0 20px;
+  margin: 26px 0;
   list-style: none;
 }
 .lots-item {
@@ -180,12 +179,13 @@
 .lots-item:before {
   content: "";
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .lots-link {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -195,19 +195,18 @@
   font-family: Raleway, sans-serif;
   font-style: normal;
   text-decoration: none;
-  z-index: 1;
 }
 .lots-item-title {
-  font-size: 22px;
   font-weight: 700;
+  font-size: 22px;
   line-height: 120%; /* 26.4px */
   text-decoration-line: underline;
   text-underline-offset: 3px;
   text-transform: uppercase;
 }
 .lots-item-text {
-  font-size: 20px;
   font-weight: 400;
+  font-size: 20px;
   line-height: 120%; /* 24px */
 }
 .lots-more {
@@ -219,17 +218,17 @@
 /* about */
 .about {
   display: grid;
+  gap: 0 20px;
   grid-template:
     "logo title" 240px
     ". text" 1fr / 430px 1fr;
-  gap: 0 20px;
 }
 .about-logo-wrap {
-  height: 240px;
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 240px;
   background: center no-repeat url(../images/ellipse.svg);
 }
 .logo-about {
@@ -239,27 +238,27 @@
   margin: 100px 5px;
 }
 .about-content {
-  grid-area: text;
   display: grid;
+  grid-area: text;
   gap: 15px 0;
 }
 .about-text {
   margin: 5px;
   color: #000;
   font-family: Raleway, sans-serif;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 /* about end */
 
 /* footer */
 .footer {
-  align-items: flex-start;
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0 50px 90px 50px;
 }
 .menu-list-footer {
